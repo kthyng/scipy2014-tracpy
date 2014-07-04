@@ -2,7 +2,7 @@ Title: TracPy: Wrapping the FORTRAN Lagrangian trajectory model TRACMASS
 Authors: Kristen M. Thyng and Robert D. Hetland
 Date: March 13, 2014
 
-Submitted to: Geospatial data in scienceot
+Submitted to: Geospatial data in science
 
 Numerical Lagrangian tracking is a way to follow parcels of fluid as they are advected by a numerical circulation model. This is a natural method to investigate transport in a system and understand the physics on the wide range of length scales that are actually experienced by a drifter. TRACMASS is a tool for Lagrangian trajectory modeling that has been developed over the past two decades. It has been used to better understand physics and its applications to real-world problems in many areas around the world, in both atmospheric and oceanic settings. TRACMASS is written in FORTRAN, which is great for speed but not as great for ease of use. This code has been wrapped in Python to run batches of simulations and improve accessibility --- and dubbed TracPy. 
 
