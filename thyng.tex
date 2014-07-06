@@ -108,24 +108,24 @@
 	{\tiny Photo: Texas Parks and Wildlife Department}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Lagrangian Approach to Understanding HABs}
-	\begin{figure}[htbp]
-		\centering
-		\only<1>{\includegraphics[width=.5\textwidth]{figures/exp7_example}}
-		\only<2>{\includegraphics[width=\textwidth]{figures/exp70901}}
-		% \only<3>{\includegraphics[width=\textwidth]{figures/exp20925PAtracks09}}
-		% \only<3>{\includegraphics[width=\textwidth]{figures/conByHAB0601hexbin}}
-	\end{figure}
-	{\tiny Thyng, K.M, et al, L\&O:FE 2013}
-	% \only<2>{Tracking drifters backward from Port Aransas from the autumn into summer helps indicate their origin}
-	% \only<3>{Drifters always come from the east, but tend to also come from the south in HAB years}
-\end{frame}
+% \begin{frame}
+% 	\frametitle{Lagrangian Approach to Understanding HABs}
+% 	\begin{figure}[htbp]
+% 		\centering
+% 		\only<1>{\includegraphics[width=.5\textwidth]{figures/exp7_example}}
+% 		\only<2>{\includegraphics[width=\textwidth]{figures/exp70901}}
+% 		% \only<3>{\includegraphics[width=\textwidth]{figures/exp20925PAtracks09}}
+% 		% \only<3>{\includegraphics[width=\textwidth]{figures/conByHAB0601hexbin}}
+% 	\end{figure}
+% 	{\tiny Thyng, K.M, et al, L\&O:FE 2013}
+% 	% \only<2>{Tracking drifters backward from Port Aransas from the autumn into summer helps indicate their origin}
+% 	% \only<3>{Drifters always come from the east, but tend to also come from the south in HAB years}
+% \end{frame}
 
 
 %%% Numerical Approach %%%
 
-\section{Numerical Approach}
+\section{TracPy}
 
 
 % \begin{frame}[t]\frametitle{Numerical Approach}
@@ -133,23 +133,6 @@
 
 
 % \end{frame}
-
-\begin{frame}[t]\frametitle{Numerical Domain}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.6\textwidth]{figures/TXLA_domain.png}
-	\end{figure}
-\end{frame}
-
-
-\begin{frame}[t]\frametitle{Surface Salinity}
-	\begin{figure}
-	  	\centering
-	   	\includemovie[autoplay, poster, autopause, autoresume, controls, repeat
-	   	]{\textwidth}{0.4\textwidth}{figures/2008.mp4}
-		%\vskip-1ex
-	\end{figure}
-\end{frame}
 
 \begin{frame}[t]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
@@ -159,7 +142,7 @@
 	{\Large Horizontal velocities on a staggered Arakawa C grid}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box2}
@@ -167,7 +150,7 @@
 	{\Large Linearly interpolate $u$ in x to find $u(x)$ across cell}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box3}
@@ -175,7 +158,7 @@
 	{\Large $u=\frac{dx}{dt}$}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box4}
@@ -183,7 +166,7 @@
 	{\Large $\frac{dx}{dt}$ can be analytically solved for $x(t)$}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box5}
@@ -191,7 +174,7 @@
 	{\Large Solve for the time $t$ when drifter would hit $x$ wall}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box6}
@@ -199,7 +182,7 @@
 	{\Large Same process in $y$ and $z$ directions}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box7}
@@ -207,7 +190,7 @@
 	{\Large Same process in $y$ and $z$ directions}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box8}
@@ -215,7 +198,7 @@
 	{\Large Same process in $y$ and $z$ directions}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box9}
@@ -223,7 +206,7 @@
 	{\Large Same process in $y$ and $z$ directions}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box10}
@@ -231,7 +214,7 @@
 	{\Large Minimum overall time is used to calculate position}
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
-\begin{frame}[t,noframenumbering]\frametitle{Lagrangian Trajectory Model}
+\begin{frame}[t,noframenumbering]\frametitle{TRACMASS}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=.5\textwidth]{figures/tracmass_box11}
@@ -240,30 +223,30 @@
 	\tiny{\\After TRACMASS documentation. http://www.tracmass.org, http://doos.misu.su.se/tracmass/}
 \end{frame}
 
-\begin{frame}[t]\frametitle{TRACMASS validation}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\textwidth]{figures/validation}
-	\end{figure}
-	% \tiny{\\From WHERE}
-\end{frame}
+% \begin{frame}[t]\frametitle{TRACMASS validation}
+% 	\begin{figure}[htbp]
+% 		\centering
+% 		\includegraphics[width=\textwidth]{figures/validation}
+% 	\end{figure}
+% 	% \tiny{\\From WHERE}
+% \end{frame}
 
-\begin{frame}[t]\frametitle{Drifter Trajectories}
-% EXPLAIN SIMULATION DETAILS FOR DRIFTERS
-	\begin{figure}
-	  	\centering
-	   	\includemovie[autoplay, poster, autopause, autoresume, controls, repeat
-	   	]{\textheight}{0.8\textheight}{figures/drifter_movie.mp4}
-		%\vskip-1ex
-	\end{figure}
-\end{frame}
+% \begin{frame}[t]\frametitle{Drifter Trajectories}
+% % EXPLAIN SIMULATION DETAILS FOR DRIFTERS
+% 	\begin{figure}
+% 	  	\centering
+% 	   	\includemovie[autoplay, poster, autopause, autoresume, controls, repeat
+% 	   	]{\textheight}{0.8\textheight}{figures/drifter_movie.mp4}
+% 		%\vskip-1ex
+% 	\end{figure}
+% \end{frame}
 
 
 %%% TracPy
 
-\section{Wrapper}
+% \section{Wrapper}
 
-\begin{frame}[t]\frametitle{TracPy}
+\begin{frame}[t]\frametitle{Code Overview}
     % SHOW DIAGRAM OF TRACPY VS. TRACMASS, including tracpy class and parts
     \vskip-2ex
 	\begin{figure}[htbp]
@@ -272,7 +255,7 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}[t]\frametitle{TracPy performance}
+\begin{frame}[t]\frametitle{TracPy serial performance}
     \vskip4ex
 	\begin{figure}[htbp]
 		\centering
@@ -293,13 +276,13 @@ File size (GB) & 3.6 & 2.1 & 42
 \end{frame}
 
 
-\begin{frame}[t]\frametitle{Parallelization}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.6\textwidth]{figures/area3_tracks}
-		\includegraphics[width=0.27\textwidth]{figures/parallelization}
-	\end{figure}
-\end{frame}
+% \begin{frame}[t]\frametitle{Parallelization}
+% 	\begin{figure}[htbp]
+% 		\centering
+% 		\includegraphics[width=0.6\textwidth]{figures/area3_tracks}
+% 		\includegraphics[width=0.27\textwidth]{figures/parallelization}
+% 	\end{figure}
+% \end{frame}
 
 % \begin{frame}[t]\frametitle{Lessons learned}
     
@@ -307,25 +290,28 @@ File size (GB) & 3.6 & 2.1 & 42
 
 % \end{frame}
 
-\begin{frame}[t]\frametitle{Future work}
-\begin{itemize}
-	\item {\Large Integration into NOAA's GNOME oil tracking system}
-	\item[] ~
-	\item {\Large Improve grid read in speed and memory required}
-	\item[] ~
-	\item {\Large Append output to track file instead of storing for full run}
-	\item[] ~
-	\item {\Large Possibly rearrange drifter arrangement in output file to reduce nan storage}
-	\item[] ~
-	\item {\Large Storage could be updated to full netCDF4 format.}
-	\item[] ~
-	\item {\Large The modularity of the TracPy class should be improved.}
-\end{itemize}
-\end{frame}
-
 %%% Uses
 
 \section{Uses of TracPy}
+
+
+\begin{frame}[t]\frametitle{Numerical Domain}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/TXLA_domain.png}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}[t]\frametitle{Surface Salinity}
+	\begin{figure}
+	  	\centering
+	   	\includemovie[autoplay, poster, autopause, autoresume, controls, repeat
+	   	]{\textwidth}{0.4\textwidth}{figures/2008.mp4}
+		%\vskip-1ex
+	\end{figure}
+\end{frame}
+
 
 \begin{frame}[t]\frametitle{Cross-shelf transport}
 	\begin{figure}[htbp]
@@ -355,19 +341,19 @@ File size (GB) & 3.6 & 2.1 & 42
 	\end{figure}
 \end{frame}
 
-\begin{frame}[t]\frametitle{Error due to temporal sampling}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.8\textwidth]{figures/D}
-	\end{figure}
-\end{frame}
+% \begin{frame}[t]\frametitle{Error due to temporal sampling}
+% 	\begin{figure}[htbp]
+% 		\centering
+% 		\includegraphics[width=0.8\textwidth]{figures/D}
+% 	\end{figure}
+% \end{frame}
 
-\begin{frame}[t]\frametitle{River tracks}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\textwidth]{figures/river_drifter_tracks}
-	\end{figure}
-\end{frame}
+% \begin{frame}[t]\frametitle{River tracks}
+% 	\begin{figure}[htbp]
+% 		\centering
+% 		\includegraphics[width=0.9\textwidth]{figures/river_drifter_tracks}
+% 	\end{figure}
+% \end{frame}
 
 \section{Summary}
 
@@ -390,10 +376,70 @@ File size (GB) & 3.6 & 2.1 & 42
     \end{itemize}
 \end{frame}
 
+\begin{frame}[t]\frametitle{TracPy Manual}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/manual1}
+	\end{figure}
+\end{frame}
+\begin{frame}[t,noframenumbering]\frametitle{TracPy Manual}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/manual2}
+	\end{figure}
+\end{frame}
+\begin{frame}[t,noframenumbering]\frametitle{TracPy Manual}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{figures/manual3}
+	\end{figure}
+\end{frame}
+\begin{frame}[t,noframenumbering]\frametitle{TracPy Manual}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{figures/manual4}
+	\end{figure}
+\end{frame}
+\begin{frame}[t,noframenumbering]\frametitle{TracPy Manual}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.45\textwidth]{figures/manual5}
+	\end{figure}
+\end{frame}
+\begin{frame}[t,noframenumbering]\frametitle{TracPy Manual}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/manual6}
+	\end{figure}
+\end{frame}
+\begin{frame}[t,noframenumbering]\frametitle{TracPy Manual}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.7\textwidth]{figures/manual7}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[t]\frametitle{Future work}
+\begin{itemize}
+	\item {\Large Integration into NOAA's GNOME oil tracking system}
+	\item[] ~
+	\item {\Large Improve grid read in speed and memory required}
+	\item[] ~
+	\item {\Large Append output to track file instead of storing for full run}
+	\item[] ~
+	\item {\Large Possibly rearrange drifter arrangement in output file to reduce nan storage}
+	\item[] ~
+	\item {\Large Storage could be updated to full netCDF4 format.}
+	\item[] ~
+	\item {\Large The modularity of the TracPy class should be improved.}
+\end{itemize}
+\end{frame}
+
 
 % Funding, with logos
 \begin{frame}
 	\frametitle{Thank you!}
+	TracPy: https://github.com/kthyng/tracpy
 	\begin{figure}[htbp]
 		\centering
 		\subfigure{\includegraphics[width=.45\textwidth]{figures/TAM-Logo.png}}
